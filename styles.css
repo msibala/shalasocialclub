@@ -72,7 +72,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #888;
+    color: #daf224cb;
 }
 
 .social-icons {
@@ -82,7 +82,7 @@ nav ul li a:hover {
 
 .social-icons a {
     margin-left: 1.2rem;
-    color: white;
+    color: #daf224cb;
     text-decoration: none;
 }
 
@@ -149,7 +149,7 @@ main {
 footer {
     padding: 1.5rem 3rem;
     font-size: 0.8rem;
-    color: #666;
+    color: white;
     text-align: center;
     font-family: 'Inter', sans-serif;
     letter-spacing: 0.03rem;
