@@ -1,0 +1,214 @@
+/* --------------------
+   BASE LAYOUT & COLORS
+   -------------------- */
+
+   :root {
+    --bg-main: #f4f6cf;      /* light yellow from your deck */
+    --text-main: #3b3f13;    /* deep olive text */
+    --accent-olive: #5a6b1f; /* darker olive for emphasis */
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  
+  /* Wrapper */
+  
+  .about-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3.5rem 1.25rem 4.5rem;
+  }
+  
+  /* --------------------
+     TYPOGRAPHY
+     -------------------- */
+  
+  /* Non-cursive headings – your main sans font should be set globally */
+  .section-label {
+    font-size: 1.05rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 1.25rem;
+  }
+  
+  /* Paragraphs */
+  .body-text {
+    font-size: 0.98rem;
+    max-width: 52rem;
+  }
+  
+  /* Subheadings under "why shala events" */
+  .subheading {
+    font-size: 0.9rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 0.35rem;
+    color: var(--accent-olive);
+  }
+  
+  /* Cursive heading – plug in your cursive font */
+  .script-heading {
+    font-size: 2.25rem;
+    margin: 0 0 1.5rem;
+    font-family: "YourScriptFont", cursive; /* replace with your actual script font */
+    font-weight: 400;
+  }
+  
+  /* --------------------
+     SECTION LAYOUT
+     -------------------- */
+  
+  .section {
+    margin-bottom: 3.25rem;
+  }
+  
+  .section-narrow {
+    max-width: 640px;
+  }
+  
+  .section-wide {
+    max-width: 100%;
+  }
+  
+  .why-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+    gap: 2.5rem;
+    align-items: start;
+  }
+  
+  /* Photo area */
+  .why-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #a1ad63;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+  }
+  
+  /* Each “Why” item */
+  .why-item {
+    margin-bottom: 1.6rem;
+  }
+  
+  /* --------------------
+     FADE-IN ANIMATION
+     -------------------- */
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(18px);
+    animation-name: fadeInUp;
+    animation-duration: 1.25s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+  
+  .delay-1 {
+    animation-delay: 0.25s;
+  }
+  
+  .delay-2 {
+    animation-delay: 0.5s;
+  }
+  
+  .delay-3 {
+    animation-delay: 0.75s;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* --------------------
+     RESPONSIVE STYLES
+     -------------------- */
+  
+  /* Medium screens (tablets / small laptops) */
+  @media (max-width: 992px) {
+    .about-page {
+      padding: 3rem 1.5rem 4rem;
+      max-width: 900px;
+    }
+  
+    .script-heading {
+      font-size: 2rem;
+    }
+  
+    .section-label {
+      font-size: 1rem;
+    }
+  
+    .body-text {
+      font-size: 0.97rem;
+    }
+  }
+  
+  /* Small screens (phones) */
+  @media (max-width: 768px) {
+    .about-page {
+      padding: 2.75rem 1.25rem 3.5rem;
+    }
+  
+    .section {
+      margin-bottom: 2.5rem;
+    }
+  
+    .section-label {
+      font-size: 0.95rem;
+      letter-spacing: 0.14em;
+    }
+  
+    .body-text {
+      font-size: 0.95rem;
+    }
+  
+    .script-heading {
+      font-size: 1.8rem;
+    }
+  
+    .why-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .why-image {
+      order: -1; /* image appears on top on mobile */
+    }
+  }
+  
+  /* Extra small screens (very narrow phones) */
+  @media (max-width: 480px) {
+    .about-page {
+      padding-inline: 1rem;
+    }
+  
+    .script-heading {
+      font-size: 1.6rem;
+    }
+  
+    .body-text {
+      font-size: 0.93rem;
+    }
+  }
